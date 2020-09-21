@@ -7,4 +7,4 @@ The implementation of moisture tracers, or water vapor tracers (WVT), in a regio
 
 Users should follow the next steps to run WRF with tracers.
 
-##Download WRF version 3.8.1 at http://www2.mmm.ucar.edu/wrf/users/download/get_sources.html
+- Download WRF version 3.8.1 at http://www2.mmm.ucar.edu/wrf/users/download/get_sources.html
