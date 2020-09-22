@@ -24,4 +24,22 @@ Additionally, WRF-WVTs can also be used to destroy the moisture in a certain reg
 
 ## Running WRF
 
-When running the model, only two additional tasks need to be performed when using the moisture tracers. First, you have to link the NetCDF file that contains the source region, which we usually call trmask_d01. Once the trmask_d01 file has been linked to the directory where the simulation will be run, the namelist.input file must be modified.
+When running the model, only two additional tasks need to be performed when using the moisture tracers. First, you have to link the NetCDF file that contains the source region, which we usually call trmask_d01. Once the trmask_d01 file has been linked to the directory where the simulation will be run, the namelist.input file must be modified. Below are the new parameters to be added in the namelist.input file.
+
+```
+ &time_control
+ io_form_auxinput8                   = 2,	                  ;format of "trmask_d<domain>" file
+ auxinput8_inname                    = "trmask_d<domain>",	;file with tracers masks 
+
+ &physics
+ scalar_pblmix                       = 0,	                  ;0 is necessary to prevent the scalar turbulent diffusion from being made twice
+ tracer_pblmix                       = 0,	                  ;0 is necessary to prevent the tracer turbulent diffusion from being made twice
+
+ &dynamics        
+ tracer_adv_opt                      = 4,	                  ;advection option for tracers (4 is necessary to avoid numerical errors => moist_adv_opt = 4)  
+ tracer_opt                          = 3,	                  ;choose 3 to activate tracers
+ tracer2dsource		                   = 1,	                  ;choos 1 to activate 2D sources (0 no 2D source)
+ tracer3dsource		                   = 0,	                  ;choos 1 to activate 3D sources (0 no 3D source)
+ tracer3dsink		                     = 0,	                  ;choos 1 to activate 3D sinks (0 no 3D sink)
+ tracerBCndown                       = 0,	                  ;choos 1 to activate tracers boundary conditions (when a ndown has been done for a nested domain)
+ ```
