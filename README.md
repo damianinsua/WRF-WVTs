@@ -15,3 +15,7 @@ Users should follow the next steps to run WRF with tracers.
 - Compile the WRF model as usual
 
 ### Preprocessing
+
+The WPS program (grogrid, ungrib and metgrid) is not modified when introducing the moisture tracers. Therefore, it should be run as usual.However, a new pre-processing task is now needed before running the model. In addition to the met_em files from metgrid, you will need another NetCDF file containing the source region to be analyzed.
+
+WRF-WVTs allows moisture tracking from 2-D and 3-D sources. A 2-D source refers to tagging moisture from surface evapotranspiration over a certain area. For its part, a 3-D source encompasses the entire atmosphere over a region of interest, or only a part of it (for example, the stratosphere), from which all exiting moisture is tagged.The NetCDF file containing the source regions must have a variable called TRMASK2D if you want to track moisture from a 2-D source or a variable called TRMASK3D if you want to track moisture from a 3-D source.These variables will take the value of 1 in the source region and 0 in the rest of the domain. So, for example, if you want to tagg moisture coming from the continents, the TRMASK2D variable should be exactly the same as the LANDMASK variable.
