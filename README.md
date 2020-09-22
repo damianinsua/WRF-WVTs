@@ -51,7 +51,7 @@ When you have modified the namelist.input, you simply have to run the model as u
 
 When you use WRF-WVTs, 13 new variables will appear in the wrfout output file. As we use the WSM6 scheme, which includes 6 moisture species, 6 moisture tracers species will also appear, called tr_qv, tr_qc,tr_qi,tr_qr,tr_qs and tr_qg (water vapor, cloud water, rain water, snow, ice and graupel tracer mixing ratios, respectively). TR_RAINC and TR_RAINNC will be the tracer convective and non convective precipitation, i.e. coming from the chosen source region. TR_SNOWNC and TR_GRAUPELNC correspond to tracer snow and graupel (solid) precipitation. The other three variables (TRQFX,tr_thum_u_phy_dt and tr_thum_v_phy_dt) were only implemented for validation purposes.
  
-## Package citation
+## Citation
 
 You should include the following reference whenever you use the WRF-WVTs tool for research publications.
 
