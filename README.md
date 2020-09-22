@@ -43,7 +43,7 @@ When running the model, only two additional tasks need to be performed when usin
  tracer3dsink        = 0,	    ;choose 1 to activate 3D sinks (0 no 3D sink)
  tracerBCndown       = 0,	    ;choose 1 to activate tracers boundary conditions (only when a ndown has been done for a nested domain)
  ```
-The previous options have been included in the README.tracers file in the run directory. You must also take into account that in order to use WRF-WVTs, it will be mandatory to select the following parameterizations: Yonsei University PBL scheme (bl_pbl_physics=1), the WRF Single-Moment 6-class microphysics scheme (mp_physics=6) and the Kain–Fritsch convective parameterization (cu_physics=1). The rest of the parameterizations, such as the land surface scheme or radiation schemes, are freely selectable.
+The previous options have been included in the README.tracers file in the run directory. You must also take into account that in order to use WRF-WVTs, it is mandatory to select the following parameterisations: Yonsei University PBL scheme (bl_pbl_physics=1), the WRF Single-Moment 6-class microphysics scheme (mp_physics=6) and the Kain–Fritsch convective parameterisation (cu_physics=1), although in a convective-resolving scale, tracers can also be used without the Kain–Fritsch scheme. The rest of the parameterisations, such as the land surface scheme or radiation schemes, are freely selectable.
 
 When you have modified the namelist.input, you simply have to run the model as usual and that's it!
 
