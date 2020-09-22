@@ -43,3 +43,13 @@ When running the model, only two additional tasks need to be performed when usin
  tracer3dsink        = 0,	    ;choose 1 to activate 3D sinks (0 no 3D sink)
  tracerBCndown       = 0,	    ;choose 1 to activate tracers boundary conditions (only when a ndown has been done for a nested domain)
  ```
+ 
+ ## Package citation
+
+You should include the following reference whenever you use the WRF-WVT for research publications.
+
+***Insua-Costa, D. and Miguez-Macho, G.***: A new moisture tagging capability in the Weather Research and Forecasting model: formulation, validation and application to the 2014 Great Lake-effect snowstorm, Earth Syst. Dynam., 9, 167–185, https://doi.org/10.5194/esd-9-167-2018, 2018.
+
+## Contact
+
+Feel free to contact me: damian.insua@usc.es
