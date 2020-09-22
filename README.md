@@ -7,14 +7,14 @@ The implementation of moisture tracers, or water vapor tracers (WVT), in a regio
 
 Users should follow the following steps to run WRF with tracers.
 
-### Compilation
+## Compilation
 
 - Download WRF version 3.8.1 at http://www2.mmm.ucar.edu/wrf/users/download/get_sources.html
 - Download here the model modules modified to allow moisture tracking, which are compressed within the modules_tracers_3.8.1.tar file
 - Move the modules_tracers_3.8.1.tar file to the root directory of the WRF code and decompress it (tar -cvf modules_tracers_3.8.1.tar)
 - Compile the WRF model as usual
 
-### Preprocessing
+## Preprocessing
 
 The WPS program (grogrid, ungrib and metgrid) is not modified when introducing the moisture tracers. Therefore, it should be run as usual.However, a new pre-processing task is now needed before running the model. In addition to the met_em files from metgrid, you will need another NetCDF file containing the source region to be analyzed.
 
