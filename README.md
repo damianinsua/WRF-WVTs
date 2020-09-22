@@ -23,3 +23,5 @@ WRF-WVTs allows moisture tracking from 2-D and 3-D sources. A 2-D source refers 
 Additionally, WRF-WVTs can also be used to destroy the moisture in a certain region (sink). In this case, the sink variable must be called TRMASK3D2 within the NetCDF file. Thus, at all grid points where TRMASK3D2=1 the moisture will be forced to zero (q=0).
 
 ## Running WRF
+
+When running the model, only two additional tasks need to be performed when using the moisture tracers. First, you have to link the NetCDF file that contains the source region, which we usually call trmask_d01. Once the trmask_d01 file has been linked to the directory where the simulation will be run, the namelist.input file must be modified.
