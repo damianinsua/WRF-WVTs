@@ -28,8 +28,8 @@ When running the model, only two additional tasks need to be performed when usin
 
 ```
  &time_control
- io_form_auxinput8   = 2,                      ;format of "trmask_d<domain>" file
- auxinput8_inname    = "trmask_d<domain>",     ;file with tracers masks 
+ io_form_auxinput8   = 2,                      ;format of "trmask_d<domain>" file (NetCDF)
+ auxinput8_inname    = "trmask_d<domain>",     ;name of the file with the source regions 
 
  &physics
  scalar_pblmix       = 0,     ;0 is necessary to prevent the scalar turbulent diffusion from being made twice
@@ -43,10 +43,17 @@ When running the model, only two additional tasks need to be performed when usin
  tracer3dsink        = 0,	    ;choose 1 to activate 3D sinks (0 no 3D sink)
  tracerBCndown       = 0,	    ;choose 1 to activate tracers boundary conditions (only when a ndown has been done for a nested domain)
  ```
- 
- ## Package citation
+The previous options have been included in the README.tracers file in the run directory. You must also take into account that in order to use WRF-WVTs, it will be mandatory to select the following parameterizations: Yonsei University PBL scheme (bl_pbl_physics=1), the WRF Single-Moment 6-class microphysics scheme (mp_physics=6) and the Kain–Fritsch convective parameterization (cu_physics=1). The rest of the parameterizations, such as the land surface scheme or radiation schemes, are freely selectable.
 
-You should include the following reference whenever you use the WRF-WVT for research publications.
+When you have modified the namelist.input, you simply have to run the model as usual and that's it!
+
+## Postprocessing
+
+When you use WRF-WVTs, 13 new variables will appear in the wrfout output file. As we use the WSM6 scheme, which includes 6 moisture species, 6 moisture tracers species will also appear, called tr_qv, tr_qc,tr_qi,tr_qr,tr_qs and tr_qg (water vapor, cloud water, rain water, snow, ice and graupel tracer mixing ratios, respectively). TR_RAINC and TR_RAINNC will be the tracer convective and non convective precipitation, i.e. coming from the chosen source region. TR_SNOWNC and TR_GRAUPELNC correspond to tracer snow and graupel (solid) precipitation. The other three variables (TRQFX,tr_thum_u_phy_dt and tr_thum_v_phy_dt) were only implemented for validation purposes.
+ 
+## Package citation
+
+You should include the following reference whenever you use the WRF-WVTs tool for research publications.
 
 ***Insua-Costa, D. and Miguez-Macho, G.***: A new moisture tagging capability in the Weather Research and Forecasting model: formulation, validation and application to the 2014 Great Lake-effect snowstorm, Earth Syst. Dynam., 9, 167–185, https://doi.org/10.5194/esd-9-167-2018, 2018.
 
