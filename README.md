@@ -28,12 +28,12 @@ When running the model, only two additional tasks need to be performed when usin
 
 ```
  &time_control
- io_form_auxinput8   = 2,     ;format of "trmask_d<domain>" file
+ io_form_auxinput8   = 2,                      ;format of "trmask_d<domain>" file
  auxinput8_inname    = "trmask_d<domain>",     ;file with tracers masks 
 
  &physics
  scalar_pblmix       = 0,     ;0 is necessary to prevent the scalar turbulent diffusion from being made twice
- tracer_pblmix       = 0,	    ;0 is necessary to prevent the tracer turbulent diffusion from being made twice
+ tracer_pblmix       = 0,     ;0 is necessary to prevent the tracer turbulent diffusion from being made twice
 
  &dynamics        
  tracer_adv_opt      = 4,	    ;advection option for tracers (4 is necessary to avoid numerical errors => moist_adv_opt = 4)  
