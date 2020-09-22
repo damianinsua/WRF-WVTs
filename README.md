@@ -28,7 +28,7 @@ When running the model, only two additional tasks need to be performed when usin
 
 ```
  &time_control
- io_form_auxinput8   = 2,                      ;format of "trmask_d<domain>" file (NetCDF)
+ io_form_auxinput8   = 2,                      ;format of the "trmask_d<domain>" file (NetCDF)
  auxinput8_inname    = "trmask_d<domain>",     ;name of the file with the source regions 
 
  &physics
