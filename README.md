@@ -24,7 +24,7 @@ Additionally, WRF-WVTs can also be used to destroy the moisture in a certain reg
 
 ## Running WRF
 
-When running the model, only two additional tasks need to be performed when using the moisture tracers. First, you have to link the NetCDF file that contains the source region, which we usually call trmask_d01. Once the trmask_d01 file has been linked to the directory where the simulation will be run, the namelist.input file must be modified. Below are the new parameters to be added in the namelist.input file.
+When running the model, only two additional tasks need to be performed when using the moisture tracers. First, you have to link the NetCDF file that contains the source region, which we usually call trmask_d01. Once the trmask_d01 file has been linked to the directory where the simulation will be run, the namelist.input file must be modified. Please, find below the new parameters to be added in the namelist.input file.
 
 ```
  &time_control
