@@ -9,9 +9,9 @@ Users should follow the following steps to run WRF with tracers.
 
 ## Compilation
 
-- Download WRF version 3.8.1 at http://www2.mmm.ucar.edu/wrf/users/download/get_sources.html
-- Download here the model modules modified to allow moisture tracking, which are compressed within the modules_tracers_3.8.1.tar file
-- Move the modules_tracers_3.8.1.tar file to the root directory of the WRF code and decompress it (tar -xvf modules_tracers_3.8.1.tar)
+- Download WRF version 4.3.3 at https://github.com/wrf-model/WRF/releases
+- Download here the model modules modified to allow moisture tracking, which are compressed within the modules_tracers_4.3.3.tar file
+- Move the modules_tracers_4.3.3.tar file to the root directory of the WRF code and decompress it (tar -xvf modules_tracers_4.3.3.tar)
 - Compile the WRF model as usual
 
 ## Preprocessing
