@@ -37,7 +37,7 @@ When running the model, only two additional tasks need to be performed when usin
 
  &dynamics        
  tracer_adv_opt      = 4,	    ;advection option for tracers (4 is necessary to avoid numerical errors => moist_adv_opt = 4)  
- tracer_opt          = 4,	    ;choose 3 to activate tracers
+ tracer_opt          = 4,	    ;choose 4 to activate tracers
  tracer2dsource      = 1,	    ;choose 1 to activate 2D sources (0 no 2D source)
  tracer3dsource      = 0,	    ;choose 1 to activate 3D sources (0 no 3D source)
  tracer3dsink        = 0,	    ;choose 1 to activate 3D sinks (0 no 3D sink)
