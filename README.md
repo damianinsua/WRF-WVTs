@@ -5,7 +5,7 @@ Weather Research and Forecasting (WRF) model with moisture tracers
 
 The implementation of moisture tracers, or water vapor tracers (WVT), in a regional model, allows users to track moisture from any possible source within the simulation domain. Therefore, this tagging tool is especially appropriate for researchers interested in moisture source studies. 
 
-Users should follow the following steps to run WRF with tracers.
+Users should follow the following steps to run WRF with tracers. The described steps refer to version 4.3.3, but if you want to use version 3.8.1, you must take into account a couple of minor differences (see releases).
 
 ## Compilation
 
@@ -37,11 +37,10 @@ When running the model, only two additional tasks need to be performed when usin
 
  &dynamics        
  tracer_adv_opt      = 4,	    ;advection option for tracers (4 is necessary to avoid numerical errors => moist_adv_opt = 4)  
- tracer_opt          = 3,	    ;choose 3 to activate tracers
+ tracer_opt          = 4,	    ;choose 3 to activate tracers
  tracer2dsource      = 1,	    ;choose 1 to activate 2D sources (0 no 2D source)
  tracer3dsource      = 0,	    ;choose 1 to activate 3D sources (0 no 3D source)
  tracer3dsink        = 0,	    ;choose 1 to activate 3D sinks (0 no 3D sink)
- tracerBCndown       = 0,	    ;choose 1 to activate tracers boundary conditions (only when a ndown has been done for a nested domain)
  ```
 The previous options have been included in the README.tracers file in the run directory. You must also take into account that in order to use WRF-WVTs, for now it is mandatory to select the following parameterisations: Yonsei University PBL scheme (bl_pbl_physics=1), the WRF Single-Moment 6-class microphysics scheme (mp_physics=6) and the Kain–Fritsch convective parameterisation (cu_physics=1), although in a convective-resolving scale, tracers can also be used without the Kain–Fritsch scheme. The rest of the parameterisations, such as the land surface scheme or radiation schemes, are freely selectable.
 
