@@ -58,4 +58,4 @@ You should include the following reference whenever you use the WRF-WVTs tool fo
 
 ## Contact
 
-Feel free to contact me: damian.insua@usc.es
+Feel free to contact me: damian.insuacosta@ugent.be
